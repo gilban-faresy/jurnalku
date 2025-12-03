@@ -1,0 +1,1 @@
+- [x] Wrap Image.asset in ClipOval to make it circular in lib/settings_page.dart

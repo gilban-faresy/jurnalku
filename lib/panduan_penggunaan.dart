@@ -1,0 +1,189 @@
+import 'package:flutter/material.dart';
+
+class PanduanPenggunaanPage extends StatelessWidget {
+  const PanduanPenggunaanPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    const Color Blue = Color.fromARGB(255, 21, 106, 192); 
+    const Color cardIconColor = Blue;
+    Widget buildPanduanItem({
+      required String title,
+      required String subtitle,
+      required IconData icon,
+    }) {
+      return Padding(
+        padding: const EdgeInsets.only(left: 20, right: 20, bottom: 15),
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.2),
+                spreadRadius: 1,
+                blurRadius: 5,
+                offset: const Offset(0, 3),
+              ),
+            ],
+          ),
+          child: ListTile(
+            contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+            leading: Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: Blue.withOpacity(0.1),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Icon(icon, color: cardIconColor, size: 30),
+            ),
+            title: Padding(
+              padding: const EdgeInsets.only(bottom: 4.0),
+              child: Text(
+                title,
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            subtitle: Text(
+              subtitle,
+              style: const TextStyle(
+                color: Colors.black87,
+                fontSize: 13,
+              ),
+            ),
+          ),
+        ),
+      );
+    }
+
+    return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 252, 254, 255),
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        leading: const Padding(
+          padding: EdgeInsets.only(left: 10),
+          child: Icon(Icons.home_outlined, color: Colors.black),
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 10),
+            child: Row(
+              children: [
+                const Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Dennis Dwi Musti",
+                      style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 14),
+                    ),
+                    Text(
+                      "PPLG XII-3",
+                      style: TextStyle(color: Colors.black87, fontSize: 12),
+                    ),
+                  ],
+                ),
+                const SizedBox(width: 8),
+                Icon(Icons.account_circle, color: Colors.black, size: 40),
+              ],
+            ),
+          ),
+          const SizedBox(width: 5),
+        ],
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(1),
+          child: Container(
+            color: Colors.grey.shade300,
+            height: 1,
+          ),
+        ),
+      ),
+
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: const [
+                  Icon(Icons.menu_book, color: Color.fromARGB(255, 8, 89, 156), size: 35),
+                  SizedBox(width: 8),
+                  Text(
+                    "Panduan Penggunaan",
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 8, 89, 156)
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20),
+              const Text(
+                "Selamat datang di panduan penggunaan aplikasi Jurnalku. Panduan ini akan membantu Anda memahami cara menggunakan fitur-fitur yang tersedia dengan optimal.",
+                style: TextStyle(fontSize: 19, color: Colors.black87, height: 1.4),
+              ),
+              const SizedBox(height: 25),
+              const Text(
+                "Umum",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 10),
+              buildPanduanItem(
+                title: "Unggah Profile",
+                subtitle: "Panduan untuk mengunggah profile pengguna",
+                icon: Icons.description_outlined,
+              ),
+              buildPanduanItem(
+                title: "Ganti Password",
+                subtitle: "Panduan untuk mengganti password pengguna",
+                icon: Icons.description_outlined,
+              ),
+              const SizedBox(height: 20),
+              const Text(
+                "Untuk Siswa",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 10),
+              buildPanduanItem(
+                title: "Mengisi Jurnal",
+                subtitle: "Panduan untuk mengisi kegiatan sehari-hari",
+                icon: Icons.description_outlined,
+              ),
+              const SizedBox(height: 20),
+              buildPanduanItem(
+                title: "Kelengkapan Profile",
+                subtitle: "Panduan untuk melengkapi profile",
+                icon: Icons.description_outlined,
+              ),
+              const SizedBox(height: 20),
+              buildPanduanItem(
+                title: "Mengelola Portfolio",
+                subtitle: "Panduan untuk menambah, edit, dan hapus portfolio",
+                icon: Icons.description_outlined,
+              ),
+              const SizedBox(height: 20),
+              buildPanduanItem(
+                title: "Mengelola Sertifikat",
+                subtitle: "Panduan untuk menambah, edit, dan hapus sertifikat",
+                icon: Icons.description_outlined,
+              ),
+              const SizedBox(height: 20),
+              buildPanduanItem(
+                title: "Catatan Sikap Saya",
+                subtitle: "Panduan untuk melihat dan memahami catatan sikap",
+                icon: Icons.description_outlined,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
