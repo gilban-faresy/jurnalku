@@ -3,6 +3,8 @@ import 'package:jurnalku/catatansikap_page.dart';
 import 'package:jurnalku/dashboard.dart';
 import 'package:jurnalku/login_page.dart';
 import 'package:jurnalku/catatan_page.dart';
+import 'package:jurnalku/mengelolasertif_page.dart';
+import 'package:jurnalku/mengisijurnal_page.dart';
 import 'package:jurnalku/panduan_penggunaan.dart';
 import 'package:jurnalku/progress_page.dart';
 import 'package:jurnalku/settings_page.dart';
@@ -27,13 +29,14 @@ class MyApp extends StatelessWidget {
       // home: const LoginPage(),
       initialRoute: '/',
        routes: {
-        "/": (context) => const CatatansikapPage(),
+        "/": (context) =>  MengelolasertifPage(),
         "/dashboard": (context) => DashboardPage(),
         "/progress": (context) => ProgressPage(),
         "/catatan": (context) => CatatanPage(),
         "/settings": (context) => SettingsPage(),
         "/panduan-penggunaan": (context) => PanduanPenggunaanPage(),
-        // "/catatan-sikap-saya": (context) => CatatansikapPage(),
+        "/catatan-sikap-saya": (context) => CatatansikapPage(),
+        "/mengisi-jurnal": (context) => MengisijurnalPage(),
       },
     );
   }
