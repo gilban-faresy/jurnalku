@@ -6,45 +6,10 @@ class DashboardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        child: ListView(
-          children: [
-            ListTile(
-              leading: Icon(Icons.attach_money_sharp),
-              title: Text("Dashboard"),
-              onTap: () {
-                Navigator.pushNamed(context, "/dashboard");
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.camera_alt_sharp),
-              title: Text("Progress"),
-              onTap: () {
-                Navigator.pushNamed(context, "/progress");
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.settings_sharp),
-              title: Text("Setting"),
-              onTap: () {
-                Navigator.pushNamed(context, "/settings");
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.book_online),
-              title: Text("Panduan Penggunaan"),
-              onTap: () {
-                Navigator.pushNamed(context, "/panduan-penggunaan");
-              },
-            ),
-            
-          ],
-        ),
-      ),
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
-        leading: Padding(
+        leading: const Padding(
           padding: EdgeInsets.only(left: 10),
           child: Icon(Icons.home_outlined, color: Colors.black),
         ),
@@ -71,22 +36,8 @@ class DashboardPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(width: 8),
-                Icon(Icons.account_circle, color: Colors.black, size: 40),
-                Builder(
-                  builder: (context) => IconButton(
-                    icon: Icon(
-                      Icons.arrow_drop_down,
-                      color: Colors.black,
-                      size: 20,
-                    ),
-                    padding: EdgeInsets.zero,
-                    constraints: const BoxConstraints(),
-                    onPressed: () {
-                      Scaffold.of(context).openDrawer();
-                    },
-                  ),
-                ),
+                const SizedBox(width: 8),
+                const Icon(Icons.account_circle, color: Colors.black, size: 40),
               ],
             ),
           ),

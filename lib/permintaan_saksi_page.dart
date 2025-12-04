@@ -25,7 +25,11 @@ class PermintaanSaksiPage extends StatelessWidget {
                   children: [
                     Text(
                       "Dennis Dwi Musti",
-                      style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 14),
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
+                      ),
                     ),
                     Text(
                       "PPLG XII-3",
@@ -42,10 +46,7 @@ class PermintaanSaksiPage extends StatelessWidget {
         ],
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(1),
-          child: Container(
-            color: Colors.grey.shade300,
-            height: 1,
-          ),
+          child: Container(color: Colors.grey.shade300, height: 1),
         ),
       ),
 
@@ -55,7 +56,7 @@ class PermintaanSaksiPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 15,),
+              SizedBox(height: 15),
               const Text(
                 "Permintaan Saksi",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
@@ -67,14 +68,20 @@ class PermintaanSaksiPage extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               Container(
-                padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
+                padding: const EdgeInsets.symmetric(
+                  vertical: 8,
+                  horizontal: 15,
+                ),
                 decoration: BoxDecoration(
                   color: Colors.blue.shade50,
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: const Text(
                   "Tuesday, 18 November 2025",
-                  style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w600),
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ),
               const SizedBox(height: 20),
@@ -97,37 +104,73 @@ class PermintaanSaksiPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16.0,
+                        vertical: 12.0,
+                      ),
                       decoration: BoxDecoration(
                         color: Colors.grey[200],
-                        borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
+                        borderRadius: const BorderRadius.vertical(
+                          top: Radius.circular(12),
+                        ),
                       ),
                       child: const Row(
                         children: [
                           Expanded(
                             flex: 3,
-                            child: Text("PENGIRIM", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.black87), textAlign: TextAlign.left),
+                            child: Text(
+                              "PENGIRIM",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 13,
+                                color: Colors.black87,
+                              ),
+                              textAlign: TextAlign.left,
+                            ),
                           ),
                           Expanded(
                             flex: 3,
-                            child: Text("TANGGAL", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.black87), textAlign: TextAlign.center),
+                            child: Text(
+                              "TANGGAL",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 13,
+                                color: Colors.black87,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
                           ),
                           Expanded(
                             flex: 3,
-                            child: Text("KONFIRMASI", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.black87), textAlign: TextAlign.right),
+                            child: Text(
+                              "KONFIRMASI",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 13,
+                                color: Colors.black87,
+                              ),
+                              textAlign: TextAlign.right,
+                            ),
                           ),
                         ],
                       ),
                     ),
                     const SizedBox(height: 35),
                     const Center(
-                      child: Icon(Icons.groups_outlined, size: 45, color: Colors.grey),
+                      child: Icon(
+                        Icons.groups_outlined,
+                        size: 45,
+                        color: Colors.grey,
+                      ),
                     ),
                     const SizedBox(height: 10),
                     const Center(
                       child: Text(
                         "Belum ada permintaan",
-                        style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                     const SizedBox(height: 5),
