@@ -25,9 +25,10 @@ class DashboardPage extends StatelessWidget {
                     Text(
                       "Ikmal Gilban Faresy",
                       style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14),
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
+                      ),
                     ),
                     Text(
                       "PPLG XII-3",
@@ -36,8 +37,7 @@ class DashboardPage extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(width: 8),
-                const Icon(Icons.account_circle,
-                    color: Colors.black, size: 40),
+                const Icon(Icons.account_circle, color: Colors.black, size: 40),
               ],
             ),
           ),
@@ -45,10 +45,7 @@ class DashboardPage extends StatelessWidget {
         ],
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(1),
-          child: Container(
-            color: Colors.grey.shade300,
-            height: 1,
-          ),
+          child: Container(color: Colors.grey.shade300, height: 1),
         ),
       ),
       body: SingleChildScrollView(
@@ -86,10 +83,7 @@ class DashboardPage extends StatelessWidget {
                           Text(
                             "Solusi cerdas untuk memantau perkembangan kompetensi siswa secara efektif",
                             textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.white,
-                            ),
+                            style: TextStyle(fontSize: 16, color: Colors.white),
                           ),
                         ],
                       ),
@@ -103,10 +97,14 @@ class DashboardPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Container(
                 width: double.infinity,
-                padding:
-                    const EdgeInsets.only(left: 20, right: 20, top: 80, bottom: 100),
-                    decoration: BoxDecoration(
-                    gradient: LinearGradient(
+                padding: const EdgeInsets.only(
+                  left: 20,
+                  right: 20,
+                  top: 80,
+                  bottom: 100,
+                ),
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
                     begin: Alignment.bottomCenter,
                     end: Alignment.topCenter,
                     colors: [
@@ -147,7 +145,10 @@ class DashboardPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Container(
                 width: double.infinity,
-                padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 20),
+                padding: const EdgeInsets.symmetric(
+                  vertical: 60,
+                  horizontal: 20,
+                ),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
@@ -196,7 +197,10 @@ class DashboardPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Container(
                 width: double.infinity,
-                padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
+                padding: const EdgeInsets.symmetric(
+                  vertical: 40,
+                  horizontal: 20,
+                ),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
@@ -240,15 +244,16 @@ class DashboardPage extends StatelessWidget {
               ),
             ),
 
-
             SizedBox(height: 30),
-
 
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Container(
                 width: double.infinity,
-                padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
+                padding: const EdgeInsets.symmetric(
+                  vertical: 40,
+                  horizontal: 20,
+                ),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
@@ -310,7 +315,10 @@ class DashboardPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Container(
                 width: double.infinity,
-                padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                padding: const EdgeInsets.symmetric(
+                  vertical: 10,
+                  horizontal: 20,
+                ),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
@@ -326,8 +334,11 @@ class DashboardPage extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Icon(Icons.person_outline,
-                            size: 32, color: Color.fromARGB(255, 0, 100, 182)),
+                        Icon(
+                          Icons.person_outline,
+                          size: 32,
+                          color: Color.fromARGB(255, 0, 100, 182),
+                        ),
                         const SizedBox(width: 15),
                         Expanded(
                           child: Column(
@@ -352,7 +363,11 @@ class DashboardPage extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Icon(Icons.arrow_forward_ios, size: 16, color: Colors.black45),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          size: 16,
+                          color: Colors.black45,
+                        ),
                       ],
                     ),
 
@@ -362,8 +377,11 @@ class DashboardPage extends StatelessWidget {
 
                     Row(
                       children: [
-                        Icon(Icons.folder_open_rounded,
-                            size: 32, color: Color.fromARGB(255, 0, 100, 182)),
+                        Icon(
+                          Icons.folder_open_rounded,
+                          size: 32,
+                          color: Color.fromARGB(255, 0, 100, 182),
+                        ),
                         const SizedBox(width: 15),
                         Expanded(
                           child: Column(
@@ -388,7 +406,11 @@ class DashboardPage extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Icon(Icons.arrow_forward_ios, size: 16, color: Colors.black45),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          size: 16,
+                          color: Colors.black45,
+                        ),
                       ],
                     ),
 
@@ -397,8 +419,11 @@ class DashboardPage extends StatelessWidget {
                     const SizedBox(height: 20),
                     Row(
                       children: [
-                        Icon(Icons.star_outline,
-                            size: 32, color: Color.fromARGB(255, 0, 100, 182)),
+                        Icon(
+                          Icons.star_outline,
+                          size: 32,
+                          color: Color.fromARGB(255, 0, 100, 182),
+                        ),
                         const SizedBox(width: 15),
                         Expanded(
                           child: Column(
@@ -423,10 +448,13 @@ class DashboardPage extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Icon(Icons.arrow_forward_ios, size: 16, color: Colors.black45),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          size: 16,
+                          color: Colors.black45,
+                        ),
                       ],
                     ),
-
                   ],
                 ),
               ),
@@ -438,7 +466,10 @@ class DashboardPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Container(
                 width: double.infinity,
-                padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                padding: const EdgeInsets.symmetric(
+                  vertical: 10,
+                  horizontal: 20,
+                ),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
@@ -455,8 +486,11 @@ class DashboardPage extends StatelessWidget {
                     const SizedBox(height: 20),
                     Row(
                       children: [
-                        Icon(Icons.menu_book_outlined,
-                            size: 32, color: Color.fromARGB(255, 0, 100, 182)),
+                        Icon(
+                          Icons.menu_book_outlined,
+                          size: 32,
+                          color: Color.fromARGB(255, 0, 100, 182),
+                        ),
                         const SizedBox(width: 15),
                         Expanded(
                           child: Column(
@@ -481,7 +515,11 @@ class DashboardPage extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Icon(Icons.arrow_forward_ios, size: 16, color: Colors.black45),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          size: 16,
+                          color: Colors.black45,
+                        ),
                       ],
                     ),
 
@@ -490,8 +528,11 @@ class DashboardPage extends StatelessWidget {
                     const SizedBox(height: 20),
                     Row(
                       children: [
-                        Icon(Icons.person_search_outlined,
-                            size: 32, color: Color.fromARGB(255, 0, 100, 182)),
+                        Icon(
+                          Icons.person_search_outlined,
+                          size: 32,
+                          color: Color.fromARGB(255, 0, 100, 182),
+                        ),
                         const SizedBox(width: 15),
                         Expanded(
                           child: Column(
@@ -516,7 +557,11 @@ class DashboardPage extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Icon(Icons.arrow_forward_ios, size: 16, color: Colors.black45),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          size: 16,
+                          color: Colors.black45,
+                        ),
                       ],
                     ),
 
@@ -525,8 +570,11 @@ class DashboardPage extends StatelessWidget {
                     const SizedBox(height: 20),
                     Row(
                       children: [
-                        Icon(Icons.bar_chart_outlined,
-                            size: 32, color: Color.fromARGB(255, 0, 100, 182)),
+                        Icon(
+                          Icons.bar_chart_outlined,
+                          size: 32,
+                          color: Color.fromARGB(255, 0, 100, 182),
+                        ),
                         const SizedBox(width: 15),
                         Expanded(
                           child: Column(
@@ -551,7 +599,11 @@ class DashboardPage extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Icon(Icons.arrow_forward_ios, size: 16, color: Colors.black45),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          size: 16,
+                          color: Colors.black45,
+                        ),
                       ],
                     ),
 
@@ -560,8 +612,11 @@ class DashboardPage extends StatelessWidget {
                     const SizedBox(height: 20),
                     Row(
                       children: [
-                        Icon(Icons.warning_amber_outlined,
-                            size: 32, color: Color.fromARGB(255, 0, 100, 182)),
+                        Icon(
+                          Icons.warning_amber_outlined,
+                          size: 32,
+                          color: Color.fromARGB(255, 0, 100, 182),
+                        ),
                         const SizedBox(width: 15),
                         Expanded(
                           child: Column(
@@ -586,7 +641,11 @@ class DashboardPage extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Icon(Icons.arrow_forward_ios, size: 16, color: Colors.black45),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          size: 16,
+                          color: Colors.black45,
+                        ),
                       ],
                     ),
                   ],
@@ -643,17 +702,23 @@ class DashboardPage extends StatelessWidget {
                         Text(
                           "14",
                           style: TextStyle(
-                              fontSize: 36,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.green),
+                            fontSize: 36,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.green,
+                          ),
                         ),
                         SizedBox(height: 4),
                         Row(
                           children: [
                             Icon(Icons.circle, size: 10, color: Colors.green),
                             SizedBox(width: 5),
-                            Text("Selesai",
-                                style: TextStyle(fontSize: 14, color: Colors.green)),
+                            Text(
+                              "Selesai",
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.green,
+                              ),
+                            ),
                           ],
                         ),
                       ],
@@ -665,8 +730,11 @@ class DashboardPage extends StatelessWidget {
                         color: Colors.green.withOpacity(0.15),
                         shape: BoxShape.circle,
                       ),
-                      child: const Icon(Icons.check_circle,
-                          size: 32, color: Colors.green),
+                      child: const Icon(
+                        Icons.check_circle,
+                        size: 32,
+                        color: Colors.green,
+                      ),
                     ),
                   ],
                 ),
@@ -707,17 +775,23 @@ class DashboardPage extends StatelessWidget {
                         Text(
                           "2",
                           style: TextStyle(
-                              fontSize: 36,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.orange),
+                            fontSize: 36,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.orange,
+                          ),
                         ),
                         SizedBox(height: 4),
                         Row(
                           children: [
                             Icon(Icons.circle, size: 10, color: Colors.orange),
                             SizedBox(width: 5),
-                            Text("Pending",
-                                style: TextStyle(fontSize: 14, color: Colors.orange)),
+                            Text(
+                              "Pending",
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.orange,
+                              ),
+                            ),
                           ],
                         ),
                       ],
@@ -729,8 +803,11 @@ class DashboardPage extends StatelessWidget {
                         color: Colors.orange.withOpacity(0.15),
                         shape: BoxShape.circle,
                       ),
-                      child: const Icon(Icons.access_time,
-                          size: 32, color: Colors.orange),
+                      child: const Icon(
+                        Icons.access_time,
+                        size: 32,
+                        color: Colors.orange,
+                      ),
                     ),
                   ],
                 ),
@@ -771,17 +848,23 @@ class DashboardPage extends StatelessWidget {
                         Text(
                           "3",
                           style: TextStyle(
-                              fontSize: 36,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.blue),
+                            fontSize: 36,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.blue,
+                          ),
                         ),
                         SizedBox(height: 4),
                         Row(
                           children: [
                             Icon(Icons.circle, size: 10, color: Colors.blue),
                             SizedBox(width: 5),
-                            Text("Hari Ini",
-                                style: TextStyle(fontSize: 14, color: Colors.blue)),
+                            Text(
+                              "Hari Ini",
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.blue,
+                              ),
+                            ),
                           ],
                         ),
                       ],
@@ -793,8 +876,11 @@ class DashboardPage extends StatelessWidget {
                         color: Colors.blue.withOpacity(0.15),
                         shape: BoxShape.circle,
                       ),
-                      child: const Icon(Icons.calendar_month,
-                          size: 32, color: Colors.blue),
+                      child: const Icon(
+                        Icons.calendar_month,
+                        size: 32,
+                        color: Colors.blue,
+                      ),
                     ),
                   ],
                 ),
@@ -835,17 +921,23 @@ class DashboardPage extends StatelessWidget {
                         Text(
                           "0",
                           style: TextStyle(
-                              fontSize: 36,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.purple),
+                            fontSize: 36,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.purple,
+                          ),
                         ),
                         SizedBox(height: 4),
                         Row(
                           children: [
                             Icon(Icons.circle, size: 10, color: Colors.purple),
                             SizedBox(width: 5),
-                            Text("Revisi",
-                                style: TextStyle(fontSize: 14, color: Colors.purple)),
+                            Text(
+                              "Revisi",
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.purple,
+                              ),
+                            ),
                           ],
                         ),
                       ],
@@ -857,8 +949,11 @@ class DashboardPage extends StatelessWidget {
                         color: Colors.purple.withOpacity(0.15),
                         shape: BoxShape.circle,
                       ),
-                      child: const Icon(Icons.sync,
-                          size: 32, color: Colors.purple),
+                      child: const Icon(
+                        Icons.sync,
+                        size: 32,
+                        color: Colors.purple,
+                      ),
                     ),
                   ],
                 ),
@@ -870,7 +965,10 @@ class DashboardPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Container(
                 width: double.infinity,
-                padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
+                padding: const EdgeInsets.symmetric(
+                  vertical: 30,
+                  horizontal: 20,
+                ),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
@@ -900,7 +998,13 @@ class DashboardPage extends StatelessWidget {
                         SizedBox(width: 10),
                         Text("Selesai", style: TextStyle(fontSize: 14)),
                         Spacer(),
-                        Text("14", style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+                        Text(
+                          "14",
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ],
                     ),
                     const SizedBox(height: 15),
@@ -910,7 +1014,13 @@ class DashboardPage extends StatelessWidget {
                         SizedBox(width: 10),
                         Text("Pending", style: TextStyle(fontSize: 14)),
                         Spacer(),
-                        Text("2", style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+                        Text(
+                          "2",
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ],
                     ),
                     const SizedBox(height: 15),
@@ -920,7 +1030,13 @@ class DashboardPage extends StatelessWidget {
                         SizedBox(width: 10),
                         Text("Belum", style: TextStyle(fontSize: 14)),
                         Spacer(),
-                        Text("3", style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+                        Text(
+                          "3",
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ],
                     ),
                     const SizedBox(height: 15),
@@ -930,7 +1046,13 @@ class DashboardPage extends StatelessWidget {
                         SizedBox(width: 10),
                         Text("Hari Ini", style: TextStyle(fontSize: 14)),
                         Spacer(),
-                        Text("0", style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+                        Text(
+                          "0",
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ],
                     ),
 
@@ -946,7 +1068,11 @@ class DashboardPage extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(width: 5),
-                        const Icon(Icons.arrow_forward, color: Color(0xFF004EB5), size: 18),
+                        const Icon(
+                          Icons.arrow_forward,
+                          color: Color(0xFF004EB5),
+                          size: 18,
+                        ),
                       ],
                     ),
 
@@ -956,10 +1082,16 @@ class DashboardPage extends StatelessWidget {
                       children: [
                         const Text(
                           "Installasi Postman",
-                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
                         Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 4,
+                          ),
                           decoration: BoxDecoration(
                             color: Color(0xFFE0FFE5),
                             borderRadius: BorderRadius.circular(10),
@@ -972,7 +1104,7 @@ class DashboardPage extends StatelessWidget {
                               fontSize: 12,
                             ),
                           ),
-                        )
+                        ),
                       ],
                     ),
 
@@ -983,10 +1115,16 @@ class DashboardPage extends StatelessWidget {
                       children: [
                         const Text(
                           "Implementasi Penggunaan Postman",
-                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
                         Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 4,
+                          ),
                           decoration: BoxDecoration(
                             color: Color(0xFFE0FFE5),
                             borderRadius: BorderRadius.circular(10),
@@ -999,7 +1137,7 @@ class DashboardPage extends StatelessWidget {
                               fontSize: 12,
                             ),
                           ),
-                        )
+                        ),
                       ],
                     ),
 
@@ -1016,7 +1154,11 @@ class DashboardPage extends StatelessWidget {
                           ),
                         ),
                         SizedBox(width: 5),
-                        Icon(Icons.arrow_forward, size: 18, color: Color(0xFF004EB5)),
+                        Icon(
+                          Icons.arrow_forward,
+                          size: 18,
+                          color: Color(0xFF004EB5),
+                        ),
                       ],
                     ),
                   ],
@@ -1034,10 +1176,7 @@ class DashboardPage extends StatelessWidget {
                 children: [
                   Text(
                     "© GEN-28 PPLG SMK Wikrama Bogor. All Rights Reserved.",
-                    style: TextStyle(
-                      color: Color(0xFF004EB5),
-                      fontSize: 13,
-                    ),
+                    style: TextStyle(color: Color(0xFF004EB5), fontSize: 13),
                   ),
                 ],
               ),

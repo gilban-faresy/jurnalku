@@ -31,9 +31,10 @@ class _GantiPaswordPageState extends State<GantiPaswordPage> {
                     Text(
                       "Ikmal Gilban Faresy",
                       style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14),
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
+                      ),
                     ),
                     Text(
                       "PPLG XII-3",
@@ -42,8 +43,7 @@ class _GantiPaswordPageState extends State<GantiPaswordPage> {
                   ],
                 ),
                 const SizedBox(width: 8),
-                const Icon(Icons.account_circle,
-                    color: Colors.black, size: 40),
+                const Icon(Icons.account_circle, color: Colors.black, size: 40),
               ],
             ),
           ),
@@ -51,30 +51,30 @@ class _GantiPaswordPageState extends State<GantiPaswordPage> {
         ],
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(1),
-          child: Container(
-            color: Colors.grey.shade300,
-            height: 1,
-          ),
+          child: Container(color: Colors.grey.shade300, height: 1),
         ),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-          child: Column(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             Row(
               children: [
-                Icon(Icons.arrow_circle_left_outlined,
-                    size: 20, color: Color.fromARGB(255, 0, 86, 157)),
+                Icon(
+                  Icons.arrow_circle_left_outlined,
+                  size: 20,
+                  color: Color.fromARGB(255, 0, 86, 157),
+                ),
                 SizedBox(width: 5),
                 Text(
                   "Kembali ke Panduan Penggunaan",
                   style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Color.fromARGB(255, 0, 86, 157)),
-                )
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Color.fromARGB(255, 0, 86, 157),
+                  ),
+                ),
               ],
             ),
             SizedBox(height: 20),
@@ -117,16 +117,25 @@ class _GantiPaswordPageState extends State<GantiPaswordPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("1. Klik pada bagian Pengaturan Akun,", style: TextStyle(fontSize: 15)),
+                  Text(
+                    "1. Klik pada bagian Pengaturan Akun,",
+                    style: TextStyle(fontSize: 15),
+                  ),
                   SizedBox(height: 8),
-                  Text("2. lalu isi field Unggah Photo Profile", style: TextStyle(fontSize: 15)),
+                  Text(
+                    "2. lalu isi field Unggah Photo Profile",
+                    style: TextStyle(fontSize: 15),
+                  ),
                   SizedBox(height: 8),
-                  Text("3. Jika sudah, lalu klik Simpan", style: TextStyle(fontSize: 15)),
+                  Text(
+                    "3. Jika sudah, lalu klik Simpan",
+                    style: TextStyle(fontSize: 15),
+                  ),
                 ],
               ),
             ),
           ],
-        )
+        ),
       ),
     );
   }

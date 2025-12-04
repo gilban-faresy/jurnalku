@@ -152,7 +152,7 @@ class _CatatanPageState extends State<CatatanPage> {
                   ],
                 ),
               ),
-              
+
               SizedBox(height: 20),
               // Card Catatan 3
               Container(

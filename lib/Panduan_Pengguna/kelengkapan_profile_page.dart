@@ -31,9 +31,10 @@ class _KelengkapanProfilePageState extends State<KelengkapanProfilePage> {
                     Text(
                       "Ikmal Gilban Faresy",
                       style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14),
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
+                      ),
                     ),
                     Text(
                       "PPLG XII-3",
@@ -50,10 +51,7 @@ class _KelengkapanProfilePageState extends State<KelengkapanProfilePage> {
         ],
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(1),
-          child: Container(
-            color: Colors.grey.shade300,
-            height: 1,
-          ),
+          child: Container(color: Colors.grey.shade300, height: 1),
         ),
       ),
       body: SingleChildScrollView(
@@ -63,24 +61,30 @@ class _KelengkapanProfilePageState extends State<KelengkapanProfilePage> {
           children: [
             Row(
               children: [
-                Icon(Icons.arrow_circle_left_outlined,
-                    size: 20, color: Color.fromARGB(255, 0, 86, 157)),
+                Icon(
+                  Icons.arrow_circle_left_outlined,
+                  size: 20,
+                  color: Color.fromARGB(255, 0, 86, 157),
+                ),
                 SizedBox(width: 5),
                 Text(
                   "Kembali ke Panduan Penggunaan",
                   style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Color.fromARGB(255, 0, 86, 157)),
-                )
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Color.fromARGB(255, 0, 86, 157),
+                  ),
+                ),
               ],
             ),
             SizedBox(height: 20),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Icon(Icons.menu_book_outlined,
-                    color: Color.fromARGB(255, 0, 86, 157)),
+                Icon(
+                  Icons.menu_book_outlined,
+                  color: Color.fromARGB(255, 0, 86, 157),
+                ),
                 SizedBox(width: 10),
                 Text(
                   "Panduan\nPenggunaan",
@@ -115,16 +119,20 @@ class _KelengkapanProfilePageState extends State<KelengkapanProfilePage> {
             Text(
               "A. Mengunggah Dokumen",
               style: TextStyle(
-                  fontSize: 22,
-                  color: Color.fromARGB(255, 0, 92, 167),
-                  fontWeight: FontWeight.bold),
+                fontSize: 22,
+                color: Color.fromARGB(255, 0, 92, 167),
+                fontWeight: FontWeight.bold,
+              ),
             ),
             SizedBox(height: 20),
             Text.rich(
               TextSpan(
                 style: TextStyle(fontSize: 18, height: 1.5),
                 children: [
-                  TextSpan(text: "Di halaman profil Anda, scroll ke bawah hingga menemukan bagian "),
+                  TextSpan(
+                    text:
+                        "Di halaman profil Anda, scroll ke bawah hingga menemukan bagian ",
+                  ),
                   TextSpan(
                     text: "“Dokumen”",
                     style: TextStyle(fontWeight: FontWeight.bold),
@@ -170,10 +178,7 @@ class _KelengkapanProfilePageState extends State<KelengkapanProfilePage> {
               ),
             ),
             SizedBox(height: 20),
-            Text(
-              "2. Upload Kartu Pelajar",
-              style: TextStyle(fontSize: 18),
-            ),
+            Text("2. Upload Kartu Pelajar", style: TextStyle(fontSize: 18)),
             SizedBox(height: 10),
             Padding(
               padding: EdgeInsets.only(left: 15),
@@ -250,7 +255,8 @@ class _KelengkapanProfilePageState extends State<KelengkapanProfilePage> {
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                         TextSpan(
-                            text: " di pojok kanan atas bagian Media Sosial"),
+                          text: " di pojok kanan atas bagian Media Sosial",
+                        ),
                       ],
                     ),
                   ),

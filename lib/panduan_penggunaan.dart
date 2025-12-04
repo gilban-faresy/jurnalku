@@ -5,7 +5,7 @@ class PanduanPenggunaanPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const Color Blue = Color.fromARGB(255, 21, 106, 192); 
+    const Color Blue = Color.fromARGB(255, 21, 106, 192);
     const Color cardIconColor = Blue;
     Widget buildPanduanItem({
       required String title,
@@ -28,7 +28,10 @@ class PanduanPenggunaanPage extends StatelessWidget {
             ],
           ),
           child: ListTile(
-            contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+            contentPadding: const EdgeInsets.symmetric(
+              vertical: 10,
+              horizontal: 15,
+            ),
             leading: Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
@@ -50,10 +53,7 @@ class PanduanPenggunaanPage extends StatelessWidget {
             ),
             subtitle: Text(
               subtitle,
-              style: const TextStyle(
-                color: Colors.black87,
-                fontSize: 13,
-              ),
+              style: const TextStyle(color: Colors.black87, fontSize: 13),
             ),
           ),
         ),
@@ -80,7 +80,11 @@ class PanduanPenggunaanPage extends StatelessWidget {
                   children: [
                     Text(
                       "Dennis Dwi Musti",
-                      style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 14),
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
+                      ),
                     ),
                     Text(
                       "PPLG XII-3",
@@ -97,10 +101,7 @@ class PanduanPenggunaanPage extends StatelessWidget {
         ],
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(1),
-          child: Container(
-            color: Colors.grey.shade300,
-            height: 1,
-          ),
+          child: Container(color: Colors.grey.shade300, height: 1),
         ),
       ),
 
@@ -112,14 +113,18 @@ class PanduanPenggunaanPage extends StatelessWidget {
             children: [
               Row(
                 children: const [
-                  Icon(Icons.menu_book, color: Color.fromARGB(255, 8, 89, 156), size: 35),
+                  Icon(
+                    Icons.menu_book,
+                    color: Color.fromARGB(255, 8, 89, 156),
+                    size: 35,
+                  ),
                   SizedBox(width: 8),
                   Text(
                     "Panduan Penggunaan",
                     style: TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 8, 89, 156)
+                      color: Color.fromARGB(255, 8, 89, 156),
                     ),
                   ),
                 ],
@@ -127,7 +132,11 @@ class PanduanPenggunaanPage extends StatelessWidget {
               const SizedBox(height: 20),
               const Text(
                 "Selamat datang di panduan penggunaan aplikasi Jurnalku. Panduan ini akan membantu Anda memahami cara menggunakan fitur-fitur yang tersedia dengan optimal.",
-                style: TextStyle(fontSize: 19, color: Colors.black87, height: 1.4),
+                style: TextStyle(
+                  fontSize: 19,
+                  color: Colors.black87,
+                  height: 1.4,
+                ),
               ),
               const SizedBox(height: 25),
               const Text(

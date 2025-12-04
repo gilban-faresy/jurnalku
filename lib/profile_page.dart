@@ -52,7 +52,6 @@ class ProfilePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
               // ---------------- BACK BUTTON ----------------
               Padding(
                 padding: EdgeInsets.only(top: 15, left: 15),
@@ -96,8 +95,9 @@ class ProfilePage extends StatelessWidget {
                           backgroundColor: Colors.white,
                           child: CircleAvatar(
                             radius: 42,
-                            backgroundImage:
-                                AssetImage("assets/images/profile.jpg"),
+                            backgroundImage: AssetImage(
+                              "assets/images/profile.jpg",
+                            ),
                           ),
                         ),
                         Positioned(
@@ -111,8 +111,11 @@ class ProfilePage extends StatelessWidget {
                               shape: BoxShape.circle,
                               border: Border.all(color: Colors.white, width: 3),
                             ),
-                            child: Icon(Icons.camera_alt,
-                                color: Colors.white, size: 18),
+                            child: Icon(
+                              Icons.camera_alt,
+                              color: Colors.white,
+                              size: 18,
+                            ),
                           ),
                         ),
                       ],
@@ -141,8 +144,7 @@ class ProfilePage extends StatelessWidget {
                         SizedBox(height: 3),
                         Text(
                           "12309677  | PPLG XII-3 | Taj 5",
-                          style:
-                              TextStyle(fontSize: 14, color: Colors.black54),
+                          style: TextStyle(fontSize: 14, color: Colors.black54),
                         ),
                       ],
                     ),
@@ -156,8 +158,10 @@ class ProfilePage extends StatelessWidget {
                       ),
                       onPressed: () {},
                       icon: Icon(Icons.share, size: 16, color: Colors.white),
-                      label: Text("Bagikan",
-                          style: TextStyle(color: Colors.white)),
+                      label: Text(
+                        "Bagikan",
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ],
                 ),
@@ -203,10 +207,11 @@ class ProfilePage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-
           // ---- Portfolio ----
-          Text("Portfolio Terbaru",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700)),
+          Text(
+            "Portfolio Terbaru",
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+          ),
           SizedBox(height: 12),
 
           Container(
@@ -216,16 +221,16 @@ class ProfilePage extends StatelessWidget {
               color: Colors.white,
               borderRadius: BorderRadius.circular(12),
               border: Border.all(color: Colors.grey.shade300),
-              boxShadow: [
-                BoxShadow(color: Colors.black12, blurRadius: 3),
-              ],
+              boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 3)],
             ),
             child: Column(
               children: [
                 Icon(Icons.work_outline, color: Colors.brown, size: 42),
                 SizedBox(height: 10),
-                Text("Portfolio akan ditampilkan di sini",
-                    style: TextStyle(color: Colors.black54)),
+                Text(
+                  "Portfolio akan ditampilkan di sini",
+                  style: TextStyle(color: Colors.black54),
+                ),
               ],
             ),
           ),
@@ -233,8 +238,10 @@ class ProfilePage extends StatelessWidget {
           SizedBox(height: 35),
 
           // ---- Sertifikat ----
-          Text("Sertifikat Terbaru",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700)),
+          Text(
+            "Sertifikat Terbaru",
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+          ),
           SizedBox(height: 12),
 
           Container(
@@ -244,17 +251,20 @@ class ProfilePage extends StatelessWidget {
               color: Colors.white,
               borderRadius: BorderRadius.circular(12),
               border: Border.all(color: Colors.grey.shade300),
-              boxShadow: [
-                BoxShadow(color: Colors.black12, blurRadius: 3),
-              ],
+              boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 3)],
             ),
             child: Column(
               children: [
-                Icon(Icons.emoji_events_outlined,
-                    color: Colors.amber, size: 42),
+                Icon(
+                  Icons.emoji_events_outlined,
+                  color: Colors.amber,
+                  size: 42,
+                ),
                 SizedBox(height: 10),
-                Text("Sertifikat akan ditampilkan di sini",
-                    style: TextStyle(color: Colors.black54)),
+                Text(
+                  "Sertifikat akan ditampilkan di sini",
+                  style: TextStyle(color: Colors.black54),
+                ),
               ],
             ),
           ),
@@ -262,15 +272,18 @@ class ProfilePage extends StatelessWidget {
           SizedBox(height: 35),
 
           // -------- Dokumen Section --------
-          Text("Dokumen",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700)),
+          Text(
+            "Dokumen",
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+          ),
           SizedBox(height: 18),
 
           // -------- CV --------
-          Text("Curriculum Vitae",
-              style: TextStyle(fontWeight: FontWeight.w600)),
-          Text("Dokumen CV siswa",
-              style: TextStyle(color: Colors.black54)),
+          Text(
+            "Curriculum Vitae",
+            style: TextStyle(fontWeight: FontWeight.w600),
+          ),
+          Text("Dokumen CV siswa", style: TextStyle(color: Colors.black54)),
           SizedBox(height: 10),
 
           Row(
@@ -300,10 +313,11 @@ class ProfilePage extends StatelessWidget {
           SizedBox(height: 28),
 
           // -------- Kartu Pelajar --------
-          Text("Kartu Pelajar",
-              style: TextStyle(fontWeight: FontWeight.w600)),
-          Text("Kartu identitas siswa",
-              style: TextStyle(color: Colors.black54)),
+          Text("Kartu Pelajar", style: TextStyle(fontWeight: FontWeight.w600)),
+          Text(
+            "Kartu identitas siswa",
+            style: TextStyle(color: Colors.black54),
+          ),
           SizedBox(height: 10),
 
           Row(
@@ -331,8 +345,10 @@ class ProfilePage extends StatelessWidget {
           ),
 
           SizedBox(height: 5),
-          Text("Kartu pelajar hanya dapat dilihat oleh Anda dan guru",
-              style: TextStyle(color: Colors.orange, fontSize: 12)),
+          Text(
+            "Kartu pelajar hanya dapat dilihat oleh Anda dan guru",
+            style: TextStyle(color: Colors.orange, fontSize: 12),
+          ),
 
           SizedBox(height: 35),
 
@@ -340,8 +356,10 @@ class ProfilePage extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("Media Sosial",
-                  style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16)),
+              Text(
+                "Media Sosial",
+                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
+              ),
               Icon(Icons.edit, size: 18),
             ],
           ),

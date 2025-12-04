@@ -176,9 +176,10 @@ class _ExplorePageState extends State<ExplorePage> {
                               borderRadius: BorderRadius.circular(10),
                             ),
                           ),
-                          child: const Text("Cari",
-                              style: TextStyle(color: Colors.white),
-                        ),
+                          child: const Text(
+                            "Cari",
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ),
                       ],
                     ),
