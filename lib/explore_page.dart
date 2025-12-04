@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class ExplorePage extends StatefulWidget {
-  const ExplorePage({super.key});
+
+class Explore extends StatefulWidget {
+  const Explore({super.key});
+
 
   @override
-  State<ExplorePage> createState() => _ExplorePageState();
+  State<Explore> createState() => _ExploreState();
 }
 
-class _ExplorePageState extends State<ExplorePage> {
+
+class _ExploreState extends State<Explore> {
   List<Map<String, dynamic>> students = [
     {
       "name": "King ",
@@ -32,6 +36,7 @@ class _ExplorePageState extends State<ExplorePage> {
       "img": "https://i.pravatar.cc/150?img=29",
     },
   ];
+
 
   @override
   Widget build(BuildContext context) {
@@ -81,6 +86,7 @@ class _ExplorePageState extends State<ExplorePage> {
               ),
             ),
 
+
             Stack(
               children: [
                 SizedBox(
@@ -117,6 +123,7 @@ class _ExplorePageState extends State<ExplorePage> {
                 ),
               ],
             ),
+
 
             Transform.translate(
               offset: const Offset(0, -35),
@@ -212,7 +219,9 @@ class _ExplorePageState extends State<ExplorePage> {
               ),
             ),
 
+
             const SizedBox(height: 0),
+
 
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -225,15 +234,18 @@ class _ExplorePageState extends State<ExplorePage> {
               ),
             ),
 
+
             const SizedBox(height: 10),
 
-            // ====================== SISWA LIST =====================
+
+            // siswa list
             ListView.builder(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               itemCount: students.length,
               itemBuilder: (context, index) {
                 final s = students[index];
+
 
                 return Container(
                   margin: const EdgeInsets.symmetric(
@@ -246,7 +258,7 @@ class _ExplorePageState extends State<ExplorePage> {
                     borderRadius: BorderRadius.circular(15),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black12.withOpacity(0.06),
+                        color: const Color.fromARGB(31, 55, 22, 161).withOpacity(0.06),
                         blurRadius: 8,
                         offset: const Offset(0, 3),
                       ),
@@ -285,6 +297,7 @@ class _ExplorePageState extends State<ExplorePage> {
                         ],
                       ),
 
+
                       const SizedBox(height: 10),
                       Row(
                         children: [
@@ -306,14 +319,16 @@ class _ExplorePageState extends State<ExplorePage> {
                         ],
                       ),
 
+
                       const SizedBox(height: 15),
+
 
                       SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+                            backgroundColor: const Color.fromARGB(255, 39, 19, 170),
                             padding: const EdgeInsets.symmetric(vertical: 14),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
@@ -341,11 +356,80 @@ class _ExplorePageState extends State<ExplorePage> {
                 );
               },
             ),
-
+            SizedBox(height: 10),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {}, 
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      foregroundColor: Colors.black,
+                      side: BorderSide(color: Colors.grey.shade300),
+                      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                    ),
+                    child: Text(
+                      "Previous",
+                    ),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {}, 
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        foregroundColor: Colors.black,
+                        side: BorderSide(color: Colors.grey.shade300),
+                        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                      child: Text(
+                        "Next",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                ],
+              ),
+              ),
             const SizedBox(height: 30),
+            Container(
+              margin: EdgeInsets.only(top: 40),
+              width: double.infinity,
+              color: const Color(0xFF0A4DA2),
+              padding: EdgeInsets.symmetric(horizontal: 30),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                       FaIcon(FontAwesomeIcons.whatsapp, color: Colors.white, size: 22),
+                       SizedBox(width: 15),
+                       FaIcon(FontAwesomeIcons.instagram, color: Colors.white, size: 22),
+                       SizedBox(width: 15),
+                       FaIcon(FontAwesomeIcons.youtube, color: Colors.white, size: 22),
+                       SizedBox(width: 15),
+                       FaIcon(FontAwesomeIcons.linkedinIn, color: Colors.white, size: 22),
+                    ],
+                  ),
+                  SizedBox(height: 8),
+                  Text(
+                    "© 2024 SMK Wikrama Bogor. All rights reserved.",
+                    style: TextStyle(color: Colors.white70, fontSize: 12),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
-      ),
+     ),
     );
   }
 }

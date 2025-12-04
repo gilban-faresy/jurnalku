@@ -52,8 +52,6 @@ class ProfilePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
-              // ---------------- BACK BUTTON ----------------
               Padding(
                 padding: EdgeInsets.only(top: 15, left: 15),
                 child: ElevatedButton(
@@ -70,8 +68,6 @@ class ProfilePage extends StatelessWidget {
 
               SizedBox(height: 15),
               Container(height: 1, color: Colors.grey),
-
-              // ---------------- HEADER BANNER ----------------
               Stack(
                 clipBehavior: Clip.none,
                 children: [
@@ -353,7 +349,7 @@ class ProfilePage extends StatelessWidget {
               SizedBox(width: 10),
               Expanded(
                 child: Text(
-                  "https://www.linkedin.com/in/satriya~alham-02ab8a34/",
+                  "",
                   style: TextStyle(
                     color: Colors.blue.shade700,
                     decoration: TextDecoration.underline,
