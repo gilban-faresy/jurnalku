@@ -5,7 +5,7 @@ class PanduanPenggunaanPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const Color Blue = Color.fromARGB(255, 21, 106, 192); 
+    const Color Blue = Color.fromARGB(255, 21, 106, 192);
     const Color cardIconColor = Blue;
     Widget buildPanduanItem({
       required String title,
@@ -28,7 +28,10 @@ class PanduanPenggunaanPage extends StatelessWidget {
             ],
           ),
           child: ListTile(
-            contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+            contentPadding: const EdgeInsets.symmetric(
+              vertical: 10,
+              horizontal: 15,
+            ),
             leading: Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
@@ -50,10 +53,7 @@ class PanduanPenggunaanPage extends StatelessWidget {
             ),
             subtitle: Text(
               subtitle,
-              style: const TextStyle(
-                color: Colors.black87,
-                fontSize: 13,
-              ),
+              style: const TextStyle(color: Colors.black87, fontSize: 13),
             ),
           ),
         ),
@@ -80,7 +80,11 @@ class PanduanPenggunaanPage extends StatelessWidget {
                   children: [
                     Text(
                       "Dennis Dwi Musti",
-                      style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 14),
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
+                      ),
                     ),
                     Text(
                       "PPLG XII-3",
@@ -97,10 +101,7 @@ class PanduanPenggunaanPage extends StatelessWidget {
         ],
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(1),
-          child: Container(
-            color: Colors.grey.shade300,
-            height: 1,
-          ),
+          child: Container(color: Colors.grey.shade300, height: 1),
         ),
       ),
 
@@ -112,29 +113,37 @@ class PanduanPenggunaanPage extends StatelessWidget {
             children: [
               Row(
                 children: const [
-                  Icon(Icons.menu_book, color: Color.fromARGB(255, 8, 89, 156), size: 35),
+                  Icon(
+                    Icons.menu_book,
+                    color: Color.fromARGB(255, 8, 89, 156),
+                    size: 35,
+                  ),
                   SizedBox(width: 8),
                   Text(
                     "Panduan Penggunaan",
                     style: TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 8, 89, 156)
+                      color: Color.fromARGB(255, 8, 89, 156),
                     ),
                   ),
                 ],
               ),
-              const SizedBox(height: 20),
-              const Text(
+              SizedBox(height: 20),
+              Text(
                 "Selamat datang di panduan penggunaan aplikasi Jurnalku. Panduan ini akan membantu Anda memahami cara menggunakan fitur-fitur yang tersedia dengan optimal.",
-                style: TextStyle(fontSize: 19, color: Colors.black87, height: 1.4),
+                style: TextStyle(
+                  fontSize: 19,
+                  color: Colors.black87,
+                  height: 1.4,
+                ),
               ),
-              const SizedBox(height: 25),
-              const Text(
+              SizedBox(height: 25),
+              Text(
                 "Umum",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
-              const SizedBox(height: 10),
+              SizedBox(height: 10),
               buildPanduanItem(
                 title: "Unggah Profile",
                 subtitle: "Panduan untuk mengunggah profile pengguna",
@@ -145,40 +154,56 @@ class PanduanPenggunaanPage extends StatelessWidget {
                 subtitle: "Panduan untuk mengganti password pengguna",
                 icon: Icons.description_outlined,
               ),
-              const SizedBox(height: 20),
-              const Text(
+              SizedBox(height: 20),
+              Text(
                 "Untuk Siswa",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
-              const SizedBox(height: 10),
-              buildPanduanItem(
-                title: "Mengisi Jurnal",
-                subtitle: "Panduan untuk mengisi kegiatan sehari-hari",
-                icon: Icons.description_outlined,
+              SizedBox(height: 10),
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, "/mengisi-jurnal");
+                },
+                child: buildPanduanItem(
+                  title: "Mengisi Jurnal",
+                  subtitle: "Panduan untuk mengisi kegiatan sehari-hari",
+                  icon: Icons.description_outlined,
+                ),
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20),
               buildPanduanItem(
                 title: "Kelengkapan Profile",
                 subtitle: "Panduan untuk melengkapi profile",
                 icon: Icons.description_outlined,
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20),
               buildPanduanItem(
                 title: "Mengelola Portfolio",
                 subtitle: "Panduan untuk menambah, edit, dan hapus portfolio",
                 icon: Icons.description_outlined,
               ),
-              const SizedBox(height: 20),
-              buildPanduanItem(
-                title: "Mengelola Sertifikat",
-                subtitle: "Panduan untuk menambah, edit, dan hapus sertifikat",
-                icon: Icons.description_outlined,
+              SizedBox(height: 20),
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, "/mengelola-sertifikat");
+                },
+                child: buildPanduanItem(
+                  title: "Mengelola Sertifikat",
+                  subtitle:
+                      "Panduan untuk menambah, edit, dan hapus sertifikat",
+                  icon: Icons.description_outlined,
+                ),
               ),
-              const SizedBox(height: 20),
-              buildPanduanItem(
-                title: "Catatan Sikap Saya",
-                subtitle: "Panduan untuk melihat dan memahami catatan sikap",
-                icon: Icons.description_outlined,
+              SizedBox(height: 20),
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, "/catatan-sikap-saya");
+                },
+                child: buildPanduanItem(
+                  title: "Catatan Sikap Saya",
+                  subtitle: "Panduan untuk melihat dan memahami catatan sikap",
+                  icon: Icons.description_outlined,
+                ),
               ),
             ],
           ),

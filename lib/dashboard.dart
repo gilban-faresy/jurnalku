@@ -30,6 +30,13 @@ class DashboardPage extends StatelessWidget {
                 Navigator.pushNamed(context, "/settings");
               },
             ),
+            ListTile(
+              leading: Icon(Icons.book_online),
+              title: Text("Panduan Penggunaan"),
+              onTap: () {
+                Navigator.pushNamed(context, "/panduan-penggunaan");
+              },
+            ),
             
           ],
         ),

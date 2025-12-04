@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       // home: const LoginPage(),
       initialRoute: '/',
        routes: {
-        "/": (context) =>  LoginPage(),
+        "/": (context) =>  MengisijurnalPage(),
         "/dashboard": (context) => DashboardPage(),
         "/progress": (context) => ProgressPage(),
         "/catatan": (context) => CatatanPage(),
@@ -37,6 +37,7 @@ class MyApp extends StatelessWidget {
         "/panduan-penggunaan": (context) => PanduanPenggunaanPage(),
         "/catatan-sikap-saya": (context) => CatatansikapPage(),
         "/mengisi-jurnal": (context) => MengisijurnalPage(),
+        "/mengelola-sertifikat": (context) => MengelolasertifPage(),
       },
     );
   }
