@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:jurnalku/Panduan%20Pengguna/ganti_pasword_page.dart';
+import 'package:jurnalku/Panduan%20Pengguna/kelengkapan_profile_page.dart';
+import 'package:jurnalku/Panduan%20Pengguna/mengelola_portofolio.dart';
+import 'package:jurnalku/Panduan%20Pengguna/unggah_profile_page.dart';
 // import 'package:jurnalku/dashboard.dart';
 import 'package:jurnalku/login_page.dart';
 // import 'package:jurnalku/catatan_page.dart';
@@ -21,7 +25,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const LoginPage(),
+      home: const MengelolaPortofolioPage(),
     );
   }
 }
