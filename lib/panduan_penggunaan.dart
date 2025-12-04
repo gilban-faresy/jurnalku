@@ -5,8 +5,8 @@ class PanduanPenggunaanPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const Color Blue = Color.fromARGB(255, 21, 106, 192);
-    const Color cardIconColor = Blue;
+    Color Blue = Color.fromARGB(255, 21, 106, 192);
+    Color cardIconColor = Blue;
     Widget buildPanduanItem({
       required String title,
       required String subtitle,
@@ -144,15 +144,25 @@ class PanduanPenggunaanPage extends StatelessWidget {
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 10),
-              buildPanduanItem(
-                title: "Unggah Profile",
-                subtitle: "Panduan untuk mengunggah profile pengguna",
-                icon: Icons.description_outlined,
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, "/unggah-profile");
+                },
+                child: buildPanduanItem(
+                  title: "Unggah Profile",
+                  subtitle: "Panduan untuk mengunggah profile pengguna",
+                  icon: Icons.description_outlined,
+                ),
               ),
-              buildPanduanItem(
-                title: "Ganti Password",
-                subtitle: "Panduan untuk mengganti password pengguna",
-                icon: Icons.description_outlined,
+              InkWell(
+                onTap: (){
+                  Navigator.pushNamed(context, "/ganti-password");
+                },
+                child: buildPanduanItem(
+                  title: "Ganti Password",
+                  subtitle: "Panduan untuk mengganti password pengguna",
+                  icon: Icons.description_outlined,
+                ),
               ),
               SizedBox(height: 20),
               Text(
@@ -171,16 +181,26 @@ class PanduanPenggunaanPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              buildPanduanItem(
-                title: "Kelengkapan Profile",
-                subtitle: "Panduan untuk melengkapi profile",
-                icon: Icons.description_outlined,
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, "/kelengkapan-profile");
+                },
+                child: buildPanduanItem(
+                  title: "Kelengkapan Profile",
+                  subtitle: "Panduan untuk melengkapi profile",
+                  icon: Icons.description_outlined,
+                ),
               ),
               SizedBox(height: 20),
-              buildPanduanItem(
-                title: "Mengelola Portfolio",
-                subtitle: "Panduan untuk menambah, edit, dan hapus portfolio",
-                icon: Icons.description_outlined,
+              InkWell(
+                onTap: (){
+                  Navigator.pushNamed(context, "/mengelola-portfolio");
+                },
+                child: buildPanduanItem(
+                  title: "Mengelola Portfolio",
+                  subtitle: "Panduan untuk menambah, edit, dan hapus portfolio",
+                  icon: Icons.description_outlined,
+                ),
               ),
               SizedBox(height: 20),
               InkWell(
