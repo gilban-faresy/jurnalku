@@ -1,7 +1,37 @@
 import 'package:flutter/material.dart';
 
-class PermintaanSaksiPage extends StatelessWidget {
+class PermintaanSaksiPage extends StatefulWidget {
   const PermintaanSaksiPage({super.key});
+
+  @override
+  State<PermintaanSaksiPage> createState() => _PermintaanSaksiPageState();
+}
+
+class _PermintaanSaksiPageState extends State<PermintaanSaksiPage> {
+  List<Map<String, String>> permintaanSaksi = [
+    {
+      "pengirim": "Muhammad Husni Mbarok",
+      "tanggal": "3 Desember 2025",
+      "konfirmasi": "Menunggu",
+    },
+    {
+      "pengirim": "Muhammad Ikmal Gilban Fahresy",
+      "tanggal": "3 Desember 2025",
+      "konfirmasi": "Menunggu",
+    },
+  ];
+
+  void setujuiPermintaan(int index) {
+    setState(() {
+      permintaanSaksi[index]["konfirmasi"] = "Disetujui";
+    });
+  }
+
+  void tidakDisetujui(int index) {
+    setState(() {
+      permintaanSaksi[index]["konfirmasi"] = "Ditolak";
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +86,7 @@ class PermintaanSaksiPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
               const Text(
                 "Permintaan Saksi",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
@@ -64,7 +94,7 @@ class PermintaanSaksiPage extends StatelessWidget {
               const SizedBox(height: 5),
               const Text(
                 "Kelola permintaan menjadi saksi dari siswa lain",
-                style: TextStyle(fontSize: 15, color: Colors.black),
+                style: TextStyle(fontSize: 15),
               ),
               const SizedBox(height: 20),
               Container(
@@ -77,114 +107,81 @@ class PermintaanSaksiPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: const Text(
-                  "Tuesday, 18 November 2025",
+                  "Thursday, 4 December 2025",
                   style: TextStyle(
-                    color: Colors.blue,
+                    color: Color.fromARGB(255, 0, 99, 180),
                     fontWeight: FontWeight.w600,
                   ),
                 ),
               ),
               const SizedBox(height: 20),
-              Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: Colors.black12),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.1),
-                      spreadRadius: 1,
-                      blurRadius: 5,
-                      offset: const Offset(0, 3),
+
+              Column(
+                children: List.generate(permintaanSaksi.length, (index) {
+                  final data = permintaanSaksi[index];
+                  return Card(
+                    margin: const EdgeInsets.only(bottom: 12),
+                    elevation: 2,
+                    surfaceTintColor: Colors.transparent,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(4),
+                      side: BorderSide.none,
                     ),
-                  ],
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 16.0,
-                        vertical: 12.0,
+                    child: ExpansionTile(
+                      title: Text(
+                        data["pengirim"]!,
+                        style: const TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      decoration: BoxDecoration(
-                        color: Colors.grey[200],
-                        borderRadius: const BorderRadius.vertical(
-                          top: Radius.circular(12),
+                      subtitle: const Text("Klik untuk detail permintaan"),
+                      childrenPadding: const EdgeInsets.all(12),
+                      children: [
+                        dataTile("PENGIRIM", data["pengirim"]!),
+                        dataTile("TANGGAL", data["tanggal"]!),
+                        dataTile(
+                          "KONFIRMASI",
+                          data["konfirmasi"]!,
+                          warna: data["konfirmasi"] == "Menunggu"
+                              ? Colors.orange
+                              : data["konfirmasi"] == "Disetujui"
+                              ? Colors.green
+                              : Colors.red,
                         ),
-                      ),
-                      child: const Row(
-                        children: [
-                          Expanded(
-                            flex: 3,
-                            child: Text(
-                              "PENGIRIM",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 13,
-                                color: Colors.black87,
+                        const SizedBox(height: 12),
+                        if (data["konfirmasi"] == "Menunggu")
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Expanded(
+                                child: ElevatedButton(
+                                  onPressed: () => setujuiPermintaan(index),
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.green,
+                                  ),
+                                  child: const Text(
+                                    "SETUJUI",
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                ),
                               ),
-                              textAlign: TextAlign.left,
-                            ),
-                          ),
-                          Expanded(
-                            flex: 3,
-                            child: Text(
-                              "TANGGAL",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 13,
-                                color: Colors.black87,
+                              const SizedBox(width: 10),
+                              Expanded(
+                                child: ElevatedButton(
+                                  onPressed: () => tidakDisetujui(index),
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.red,
+                                  ),
+                                  child: const Text(
+                                    "TIDAK DISETUJUI",
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                ),
                               ),
-                              textAlign: TextAlign.center,
-                            ),
+                            ],
                           ),
-                          Expanded(
-                            flex: 3,
-                            child: Text(
-                              "KONFIRMASI",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 13,
-                                color: Colors.black87,
-                              ),
-                              textAlign: TextAlign.right,
-                            ),
-                          ),
-                        ],
-                      ),
+                      ],
                     ),
-                    const SizedBox(height: 35),
-                    const Center(
-                      child: Icon(
-                        Icons.groups_outlined,
-                        size: 45,
-                        color: Colors.grey,
-                      ),
-                    ),
-                    const SizedBox(height: 10),
-                    const Center(
-                      child: Text(
-                        "Belum ada permintaan",
-                        style: TextStyle(
-                          fontSize: 17,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 5),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 40.0),
-                      child: Text(
-                        "Belum ada yang mengirim permintaan saksi kepada Anda",
-                        style: TextStyle(fontSize: 14, color: Colors.black54),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    const SizedBox(height: 35),
-                  ],
-                ),
+                  );
+                }),
               ),
               const SizedBox(height: 30),
             ],
@@ -193,4 +190,18 @@ class PermintaanSaksiPage extends StatelessWidget {
       ),
     );
   }
+}
+
+Widget dataTile(String title, String value, {Color warna = Colors.black}) {
+  return Padding(
+    padding: const EdgeInsets.symmetric(vertical: 6),
+    child: Row(
+      children: [
+        SizedBox(width: 110, child: Text(title)),
+        Expanded(
+          child: Text(value, style: TextStyle(color: warna)),
+        ),
+      ],
+    ),
+  );
 }
