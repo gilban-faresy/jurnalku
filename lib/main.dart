@@ -5,11 +5,15 @@ import 'package:jurnalku/Panduan_Pengguna/kelengkapan_profile_page.dart';
 import 'package:jurnalku/Panduan_Pengguna/mengelola_portofolio.dart';
 import 'package:jurnalku/Panduan_Pengguna/unggah_profile_page.dart';
 import 'package:jurnalku/dashboard.dart';
+import 'package:jurnalku/explore_page.dart';
+import 'package:jurnalku/jurnal_page.dart';
 import 'package:jurnalku/login_page.dart';
 import 'package:jurnalku/catatan_page.dart';
 import 'package:jurnalku/Panduan_Pengguna/mengelolasertif_page.dart';
 import 'package:jurnalku/Panduan_Pengguna/mengisijurnal_page.dart';
 import 'package:jurnalku/panduan_penggunaan.dart';
+import 'package:jurnalku/permintaan_saksi_page.dart';
+import 'package:jurnalku/profile_page.dart';
 import 'package:jurnalku/progress_page.dart';
 import 'package:jurnalku/settings_page.dart';
 
@@ -36,9 +40,15 @@ class MyApp extends StatelessWidget {
         "/": (context) =>  LoginPage(),
         "/dashboard": (context) => DashboardPage(),
         "/progress": (context) => ProgressPage(),
-        "/catatan": (context) => CatatanPage(),
+        "/catatan-sikap": (context) => CatatanPage(),
         "/settings": (context) => SettingsPage(),
         "/panduan-penggunaan": (context) => PanduanPenggunaanPage(),
+        "/profile": (context) => ProfilePage(),
+        "/explore": (context) => Explore(),
+        "/jurnal-pembiasaan": (context) => JurnalPage(),
+        "/permintaan-saksi": (context) => PermintaanSaksiPage(),
+        
+        // detail dari panduan penggunaan
         "/catatan-sikap-saya": (context) => CatatansikapPage(),
         "/mengisi-jurnal": (context) => MengisijurnalPage(),
         "/mengelola-sertifikat": (context) => MengelolasertifPage(),

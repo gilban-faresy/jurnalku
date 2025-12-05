@@ -17,10 +17,54 @@ class DashboardPage extends StatelessWidget {
               },
             ),
             ListTile(
+              leading: Icon(Icons.person),
+              title: Text("Profile"),
+              onTap: () {
+                Navigator.pushNamed(context, "/profile");
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.explore_outlined),
+              title: Text("Explore"),
+              onTap: () {
+                Navigator.pushNamed(context, "/explore");
+              },
+            ),
+            Divider(),
+            ListTile(
+              leading: Icon(Icons.note),
+              title: Text("Jurnal Pembisaan"),
+              onTap: () {
+                Navigator.pushNamed(context, "/jurnal-pembiasaan");
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.person_2),
+              title: Text("Permintaan Saksi"),
+              onTap: () {
+                Navigator.pushNamed(context, "/permintaan-saksi");
+              },
+            ),
+            ListTile(
               leading: Icon(Icons.camera_alt_sharp),
               title: Text("Progress"),
               onTap: () {
                 Navigator.pushNamed(context, "/progress");
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.settings_sharp),
+              title: Text("Catatan Sikap"),
+              onTap: () {
+                Navigator.pushNamed(context, "/catatan-sikap");
+              },
+            ),
+            Divider(),
+            ListTile(
+              leading: Icon(Icons.book_online),
+              title: Text("Panduan Penggunaan"),
+              onTap: () {
+                Navigator.pushNamed(context, "/panduan-penggunaan");
               },
             ),
             ListTile(
@@ -31,10 +75,10 @@ class DashboardPage extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: Icon(Icons.book_online),
-              title: Text("Panduan Penggunaan"),
+              leading: Icon(Icons.logout),
+              title: Text("Logout"),
               onTap: () {
-                Navigator.pushNamed(context, "/panduan-penggunaan");
+                Navigator.pushNamed(context, "/");
               },
             ),
           ],
