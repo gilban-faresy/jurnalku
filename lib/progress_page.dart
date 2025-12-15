@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:jurnalku/progress%20belajar/gim_page.dart';
+import 'package:jurnalku/progress%20belajar/mobile_apps.dart';
+import 'package:jurnalku/progress%20belajar/project_work.dart';
+import 'package:jurnalku/progress%20belajar/ukk_page.dart';
 
 class ProgressPage extends StatefulWidget {
   const ProgressPage({super.key});
@@ -8,7 +12,6 @@ class ProgressPage extends StatefulWidget {
 }
 
 class _ProgressPageState extends State<ProgressPage> {
-  bool projectOpen = false;
   bool projectOpen2 = false;
   bool projectOpen3 = false;
   bool projectOpen4 = false;
@@ -359,15 +362,16 @@ class _ProgressPageState extends State<ProgressPage> {
                 ),
               ),
               SizedBox(height: 25),
-              // card project work 1
+              // card project 1
               GestureDetector(
                 onTap: () {
-                  setState(() {
-                    projectOpen = !projectOpen;
-                  });
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MobileApps()),
+                  );
                 },
                 child: Container(
-                  padding: const EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(12),
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Colors.grey.shade200,
@@ -375,60 +379,32 @@ class _ProgressPageState extends State<ProgressPage> {
                     border: Border.all(color: Colors.grey.shade300),
                   ),
                   child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text(
-                                "Project Work",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                              SizedBox(height: 5),
-                              Text("Kompetensi dan materi pembelajaran"),
-                            ],
-                          ),
-                          Icon(
-                            projectOpen ? Icons.expand_less : Icons.expand_more,
-                          ),
-                        ],
-                      ),
-
-                      if (projectOpen)
-                        Padding(
-                          padding: const EdgeInsets.only(top: 10),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Divider(),
-                              Text("KOPETENSI :"),
-                              Text("GURU :"),
-                              Text("TANGGAL :"),
-                              Text("STATUS :"),
-                              Text("CATATAN GURU :"),
-                              Text("CATATAN SISWA :"),
-                            ],
-                          ),
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text(
+                        "Mobile Apps",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
                         ),
+                      ),
+                      SizedBox(height: 5),
+                      Text("Kompetensi dan materi pembelajaran"),
                     ],
                   ),
                 ),
               ),
               SizedBox(height: 15),
-              // card project work 2
+              // card project 2
               GestureDetector(
                 onTap: () {
-                  setState(() {
-                    projectOpen2 = !projectOpen2;
-                  });
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => GimPage()),
+                  );
                 },
                 child: Container(
-                  padding: const EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(12),
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Colors.grey.shade200,
@@ -436,48 +412,17 @@ class _ProgressPageState extends State<ProgressPage> {
                     border: Border.all(color: Colors.grey.shade300),
                   ),
                   child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text(
-                                "Mobile Apps",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                              SizedBox(height: 5),
-                              Text("Kompetensi dan materi pembelajaran"),
-                            ],
-                          ),
-                          Icon(
-                            projectOpen2
-                                ? Icons.expand_less
-                                : Icons.expand_more,
-                          ),
-                        ],
-                      ),
-
-                      if (projectOpen2)
-                        Padding(
-                          padding: const EdgeInsets.only(top: 10),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Divider(),
-                              Text("KOPETENSI :"),
-                              Text("GURU :"),
-                              Text("TANGGAL :"),
-                              Text("STATUS :"),
-                              Text("CATATAN GURU :"),
-                              Text("CATATAN SISWA :"),
-                            ],
-                          ),
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text(
+                        "GIM",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
                         ),
+                      ),
+                      SizedBox(height: 5),
+                      Text("Kompetensi dan materi pembelajaran"),
                     ],
                   ),
                 ),
@@ -486,12 +431,13 @@ class _ProgressPageState extends State<ProgressPage> {
               // card project work 3
               GestureDetector(
                 onTap: () {
-                  setState(() {
-                    projectOpen3 = !projectOpen3;
-                  });
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => UkkPage()),
+                  );
                 },
                 child: Container(
-                  padding: const EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(12),
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Colors.grey.shade200,
@@ -499,48 +445,17 @@ class _ProgressPageState extends State<ProgressPage> {
                     border: Border.all(color: Colors.grey.shade300),
                   ),
                   child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text(
-                                "UKK (Ujian Kopemtensi Keahlian)",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                              SizedBox(height: 5),
-                              Text("Kompetensi dan materi pembelajaran"),
-                            ],
-                          ),
-                          Icon(
-                            projectOpen3
-                                ? Icons.expand_less
-                                : Icons.expand_more,
-                          ),
-                        ],
-                      ),
-
-                      if (projectOpen3)
-                        Padding(
-                          padding: const EdgeInsets.only(top: 10),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Divider(),
-                              Text("KOPETENSI :"),
-                              Text("GURU :"),
-                              Text("TANGGAL :"),
-                              Text("STATUS :"),
-                              Text("CATATAN GURU :"),
-                              Text("CATATAN SISWA :"),
-                            ],
-                          ),
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text(
+                        "UKK (Ujian Kompetensi Keahlian)",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
                         ),
+                      ),
+                      SizedBox(height: 5),
+                      Text("Kompetensi dan materi pembelajaran"),
                     ],
                   ),
                 ),
@@ -549,12 +464,13 @@ class _ProgressPageState extends State<ProgressPage> {
               // card project work 4
               GestureDetector(
                 onTap: () {
-                  setState(() {
-                    projectOpen4 = !projectOpen4;
-                  });
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ProjectWork()),
+                  );
                 },
                 child: Container(
-                  padding: const EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(12),
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Colors.grey.shade200,
@@ -562,48 +478,17 @@ class _ProgressPageState extends State<ProgressPage> {
                     border: Border.all(color: Colors.grey.shade300),
                   ),
                   child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text(
-                                "GIM",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                              SizedBox(height: 5),
-                              Text("Kompetensi dan materi pembelajaran"),
-                            ],
-                          ),
-                          Icon(
-                            projectOpen4
-                                ? Icons.expand_less
-                                : Icons.expand_more,
-                          ),
-                        ],
-                      ),
-
-                      if (projectOpen4)
-                        Padding(
-                          padding: const EdgeInsets.only(top: 10),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Divider(),
-                              Text("KOPETENSI :"),
-                              Text("GURU :"),
-                              Text("TANGGAL :"),
-                              Text("STATUS :"),
-                              Text("CATATAN GURU :"),
-                              Text("CATATAN SISWA :"),
-                            ],
-                          ),
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text(
+                        "Project Work",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
                         ),
+                      ),
+                      SizedBox(height: 5),
+                      Text("Kompetensi dan materi pembelajaran"),
                     ],
                   ),
                 ),

@@ -14,6 +14,10 @@ import 'package:jurnalku/Panduan_Pengguna/mengisijurnal_page.dart';
 import 'package:jurnalku/panduan_penggunaan.dart';
 import 'package:jurnalku/permintaan_saksi_page.dart';
 import 'package:jurnalku/profile_page.dart';
+import 'package:jurnalku/progress%20belajar/gim_page.dart';
+import 'package:jurnalku/progress%20belajar/mobile_apps.dart';
+import 'package:jurnalku/progress%20belajar/project_work.dart';
+import 'package:jurnalku/progress%20belajar/ukk_page.dart';
 import 'package:jurnalku/progress_page.dart';
 import 'package:jurnalku/settings_page.dart';
 
@@ -56,6 +60,13 @@ class MyApp extends StatelessWidget {
         "/kelengkapan-profile": (context) => KelengkapanProfilePage(),
         "/ganti-password": (context) => GantiPaswordPage(),
         "/unggah-profile": (context) => UnggahprofilePage(),
+
+        // detail dari panduan penggunaan
+        "/project-work": (context) => ProjectWork(),
+        "/mobile-apps": (context) => MobileApps(),
+        "/ukk-page": (context) => UkkPage(),
+        "/gim-page": (context) => GimPage(),
+        
       },
     );
   }

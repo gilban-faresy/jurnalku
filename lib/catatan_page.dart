@@ -8,6 +8,7 @@ class CatatanPage extends StatefulWidget {
 }
 
 class _CatatanPageState extends State<CatatanPage> {
+  bool projectOpen = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -331,48 +332,84 @@ class _CatatanPageState extends State<CatatanPage> {
               SizedBox(height: 20),
 
               // Laporan catatan
-              Container(
-                width: double.infinity,
-                padding: EdgeInsets.only(bottom: 16),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: Colors.deepPurple.shade100),
-                ),
-                child: Column(
-                  children: [
-                    Container(
-                      padding: EdgeInsets.all(16),
-                      decoration: BoxDecoration(
-                        color: Colors.deepPurple.shade50,
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              GestureDetector(
+                onTap: () {
+                  setState(() {
+                    projectOpen = !projectOpen;
+                  });
+                },
+                child: Container(
+                  padding: const EdgeInsets.all(12),
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade200,
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(color: Colors.grey.shade300),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // ===== HEADER =====
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text("No"),
-                          Text("Kategori"),
-                          Text("Catatan"),
-                          Text("Status"),
-                          Text("Dilaporakam"),
-                          Text("Update Terakhir"),
-                          Text("Aksi"),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const [
+                              Text(
+                                "Catatan Sikap",
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                              SizedBox(height: 4),
+                              Text(
+                                "Detail catatan yang dilaporkan",
+                                style: TextStyle(fontSize: 13),
+                              ),
+                            ],
+                          ),
+                          Icon(
+                            projectOpen
+                                ? Icons.expand_less
+                                : Icons.expand_more,
+                          ),
                         ],
                       ),
-                    ),
-                    // Tambahkan data catatan di sini
-                    SizedBox(height: 20),
-                    Icon(
-                      Icons.check_circle_outline,
-                      color: Colors.grey,
-                      size: 40,
-                    ),
-                    SizedBox(height: 10),
-                    Text("Tidak ada catatan ", style: TextStyle(fontSize: 16)),
-                    SizedBox(height: 10),
-                    Text(
-                      "Belum ada catatan sikap yang dilaporkan",
-                      style: TextStyle(fontSize: 14, color: Colors.grey),
-                    ),
-                  ],
+
+                      if (projectOpen)
+                        Padding(
+                          padding: const EdgeInsets.only(top: 12),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const [
+                              Divider(),
+
+                              Text("No : -"),
+                              SizedBox(height: 6),
+
+                              Text("Kategori : -"),
+                              SizedBox(height: 6),
+
+                              Text("Catatan : -"),
+                              SizedBox(height: 6),
+
+                              Text("Status : -"),
+                              SizedBox(height: 6),
+
+                              Text("Dilaporkan : -"),
+                              SizedBox(height: 6),
+
+                              Text("Update Terakhir : -"),
+                              SizedBox(height: 6),
+
+                              Text("Aksi : -"),
+                            ],
+                          ),
+                        ),
+                    ],
+                  ),
                 ),
               ),
             ],
