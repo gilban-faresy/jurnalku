@@ -37,7 +37,7 @@ class _PermintaanSaksiPageState extends State<PermintaanSaksiPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-     drawer: Drawer(
+      drawer: Drawer(
         child: ListView(
           children: [
             ListTile(
@@ -168,7 +168,6 @@ class _PermintaanSaksiPageState extends State<PermintaanSaksiPage> {
           child: Container(color: Colors.grey.shade300, height: 1),
         ),
       ),
-      
 
       body: SingleChildScrollView(
         child: Padding(
